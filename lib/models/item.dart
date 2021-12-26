@@ -8,5 +8,5 @@ class Item {
   Item({
     required this.name,
     this.isDone = false,
-  }) : this.id = Random().nextInt(1000);
+  }) : id = Random().nextInt(1000);
 }

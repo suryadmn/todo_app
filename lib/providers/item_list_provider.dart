@@ -9,7 +9,10 @@ class ItemListNotifier extends StateNotifier<List<Item>> {
   ItemListNotifier() : super([]);
 
   void addItem(Item item) {
-    state = state..add(item);
+    List<Item> _item = [...state];
+    _item.add(item);
+    state = _item;
+    //state = state..add(item);
   }
 
   void updateItem(Item item) {

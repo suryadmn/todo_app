@@ -36,6 +36,7 @@ class Home extends HookWidget {
             controller: _controller,
             decoration: InputDecoration(labelText: 'Todo...'),
             onSubmitted: (value) {
+              print(value);
               context.read(itemListProvider.notifier).addItem(
                     Item(name: value),
                   );
@@ -47,6 +48,7 @@ class Home extends HookWidget {
             child: Consumer(
               builder: (context, watch, child) {
                 final itemList = watch(itemListProvider);
+                
 
                 return ListView.builder(
                   itemCount: itemList.length,
